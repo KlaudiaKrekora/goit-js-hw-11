@@ -42,6 +42,8 @@ const createGallery = () => {
         let lightbox = new SimpleLightbox('.gallery a');
         galleryEl.addEventListener('click', event => event.preventDefault());
       } else {
+        clear();
+        LoadBtnEl.classList.add('hidden');
         Notiflix.Notify.failure(
           'Sorry, there are no images matching your search query. Please try again.'
         );
